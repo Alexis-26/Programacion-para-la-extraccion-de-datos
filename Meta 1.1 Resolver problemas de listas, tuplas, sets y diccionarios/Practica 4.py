@@ -41,10 +41,30 @@ class Estadistica:
 
         
     def histograma(self):
-        pass
+        lista = self.listaNumeros
+        d_frecuencia = {}
 
+        for i in lista:
+            count = 0
+            for j in lista:
+                if i == j:
+                    count += 1
+            d_frecuencia[i] = count
+            
+        barra = []
+        num = []
+        for index in d_frecuencia:
+            num.append(index)
+            largo_barra = "*" * d_frecuencia[index]
+            barra.append(largo_barra)
+        
+        hist = ""
+        for index in num:
+            hist = hist + str(index) + " " + barra.pop() + "\n"
+        return hist
+    
 lista = Estadistica([1, 3, 2, 4, 2, 2, 3, 2, 4, 1, 2, 1, 2, 3, 1, 3, 1])
 
 print(lista.frecuencia())
 print(lista.moda())
-
+print(lista.histograma())
