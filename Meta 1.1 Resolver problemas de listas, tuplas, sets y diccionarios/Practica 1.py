@@ -1,5 +1,5 @@
 """Alexis Cruz Miros 951 13/02/2024
-Realizar una función con una lista de números enteros, 
+Duplicados. Desarrolle una función que dada una lista de números enteros, 
 retorna True si al menos un valor aparece dos veces, y Falso si todos los elementos son distintos.
 """
 def dups(nums):
